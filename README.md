@@ -1,4 +1,5 @@
 # Old Reddit Redirect (Chrome Extension)
+I am aware that there is a setting in preferences that does this effect (under beta options).
 
 A lightweight Chrome Extension that automatically redirects `reddit.com` to `old.reddit.com`
 
