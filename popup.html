@@ -4,15 +4,110 @@
   <meta charset="UTF-8" />
   <title>Old Reddit Redirect</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 10px; width: 220px; }
-    button { width: 100%; padding: 8px; font-size: 14px; margin-top: 10px; }
+    body { 
+      font-family: Arial, sans-serif; 
+      padding: 15px; 
+      width: 200px; 
+      margin: 0;
+      background: #fff;
+    }
+    
+    h3 {
+      margin: 0 0 15px 0;
+      color: #333;
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    .status-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      border: 1px solid #e9ecef;
+    }
+    
+    .status-label {
+      font-weight: 500;
+      color: #495057;
+    }
+    
+    #status {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    
+    .status-enabled { 
+      color: #28a745; 
+    }
+    
+    .status-disabled { 
+      color: #dc3545; 
+    }
+    
+    button { 
+      width: 100%; 
+      padding: 10px 15px; 
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .btn-turn-off {
+      background-color: #dc3545;
+      color: white;
+    }
+    
+    .btn-turn-off:hover:not(:disabled) {
+      background-color: #c82333;
+    }
+    
+    .btn-turn-on {
+      background-color: #28a745;
+      color: white;
+    }
+    
+    .btn-turn-on:hover:not(:disabled) {
+      background-color: #218838;
+    }
+    
+    .footer-info {
+      margin-top: 15px;
+      font-size: 11px;
+      color: #6c757d;
+      text-align: center;
+      line-height: 1.3;
+    }
   </style>
 </head>
 <body>
   <h3>Old Reddit Redirect</h3>
-  <p>Status: <span id="status"></span></p>
-  <button id="toggleBtn">Check Status</button>
-
+    <span class="status-label">Status:</span>
+    <span id="status" class="status-enabled">Loading...</span>
+  </div>
+  <button id="toggleBtn" class="btn-turn-off">Loading...</button>
+  
+  <div class="footer-info">
+    Automatically redirects reddit.com<br>
+    to old.reddit.com
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>
