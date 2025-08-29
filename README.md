@@ -1,7 +1,11 @@
 # Old Reddit Redirect (Chrome Extension)
-I am aware that there is a setting in preferences that does this effect (under beta options).
+> Note: Reddit has an inbuilt beta option for this behaviour in preferences.
+> However, images in comments may display as and <image> link rather than the actual image
 
-A lightweight Chrome Extension that automatically redirects `reddit.com` to `old.reddit.com`
+## Features
+- Redirects `reddit.com` to `old.reddit.com`
+- Toggleable 
+- Restores visibility of images in comments that are normally hidden on old Reddit (Always on)
 
 ## Installation (Developer Mode)
 1. Clone or download this repository.
