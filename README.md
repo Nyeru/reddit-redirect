@@ -7,6 +7,14 @@
 - Toggleable 
 - Restores visibility of images in comments that are normally hidden on old Reddit (Always on)
 
+## Current Issues
+- Redirecting i.redd.it, v.redd.it urls that are often in post titles
+    - These should be ignored or redirected to the comments section.
+    - E.g Post is of an image with format i.redd.it/*.jpeg 
+    - Current Considerations:
+        - Should redirect to the comment section as expected behaviour
+        - Or exclude reddit.com/media from redirects (accessign i.redd.it redirects to reddit.com which flags this extension)
+
 ## Installation (Developer Mode)
 1. Clone or download this repository.
 2. Open Chrome and go to `chrome://extensions/`.
