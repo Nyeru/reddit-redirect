@@ -1,7 +1,6 @@
 const STATUS_EL = document.getElementById("status");
 const TOGGLE_BTN = document.getElementById("toggleBtn");
-const RULE_ID = 1;
-
+const RULE_ID = 1001;
 // Creates redirect Rule
 function createRedirectRule() {
   return {
@@ -14,7 +13,7 @@ function createRedirectRule() {
     condition: {
       urlFilter: "reddit.com",
       resourceTypes: ["main_frame"]
-    }
+    },
   };
 }
 
@@ -28,8 +27,8 @@ async function initializePopup() {
     
     if (enabled) {
       await chrome.declarativeNetRequest.updateDynamicRules({
+        removeRuleIds: [RULE_ID],
         addRules: [createRedirectRule()],
-        removeRuleIds: []
       });
     } else {
       await chrome.declarativeNetRequest.updateDynamicRules({
